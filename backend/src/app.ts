@@ -15,7 +15,7 @@ export function createApp() {
 
   app.use(
     cors({
-      origin: ["http://localhost:4000"],
+      origin: ["https://dev-connects.onrender.com"],
       credentials: true,
     })
   );
