@@ -3,11 +3,10 @@ import { env } from "../config/env.js";
 import { logger } from "../lib/logger.js";
 
 export const pool = new Pool({
-  host: env.DB_HOST,
-  port: Number(env.DB_PORT),
-  database: env.DB_NAME,
-  user: env.DB_USER,
-  password: env.DB_PASSWORD,
+  connectionString: env.DB_URL,
+  ssl: {
+    rejectUnauthorized: true,
+  },
 });
 
 export async function query<T extends QueryResultRow = QueryResultRow>(
