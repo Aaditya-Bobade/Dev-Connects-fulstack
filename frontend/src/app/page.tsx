@@ -1,4 +1,5 @@
 import ThreadsHomePage from "@/components/threads/threads-home";
+import { Suspense } from "react";
 
 export default function ThreadsPage() {
   return (
