@@ -23,6 +23,7 @@ export function createApp() {
   app.use(express.json());
 
   app.use("/api", apiRouter);
+  app.use("/health", (_req, res) => res.status(200).json({ message: "i am live" }));
 
   app.use(notFoundHandler);
   app.use(errorHandler);
